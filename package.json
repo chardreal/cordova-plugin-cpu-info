@@ -1,6 +1,6 @@
 {
 	"name": "cordova-plugin-cpu-info",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "Reads the CPU and other hardware parameters of Android/iOS device",
 	"cordova": {
 		"id": "cordova-plugin-cpu-info",
