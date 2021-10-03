@@ -8,7 +8,7 @@ Functionality of this plugin was created by Zhang Leo. This is NPM implementatio
 
 ## Install
 
-	cordova plugin add cordova-clipboard
+	cordova plugin add cordova-plugin-cpu-info
 
 ## Usage
 
@@ -26,7 +26,7 @@ Or with callback function:
 		alert(address);
 	});
 
-List of CPUInfo's methods:
+## List of `CPUInfo`'s methods
 
 ### getMacAddress
 
