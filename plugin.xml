@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.leozhang.cpuinfo" version="1.0.0">
-  <name>CPUInfo</name>
-  <js-module name="CPUInfo" src="www/CPUInfoPlugin.js">
-    <clobbers target="cordova.plugins.CPUInfo"/>
-  </js-module>
-  <platform name="android">
-    <config-file parent="/*" target="res/xml/config.xml">
-      <feature name="cpuinfo">
-        <param name="android-package" value="com.leozhang.cpuinfo"/>
-      </feature>
-    </config-file>
-    <config-file parent="/*" target="AndroidManifest.xml"/>
-    <source-file src="src/android/CPUInfo.java" target-dir="src/com/leozhang/cpuinfo"/>
-  </platform>
-  <platform name="ios">
-    <config-file parent="/*" target="config.xml">
-      <feature name="CPUInfo">
-        <param name="ios-package" value="cpuinfo"/>
-      </feature>
-    </config-file>
-    <source-file src="src/ios/CPUInfo.m"/>
-    <source-file src="src/ios/CPUInfo.h"/>
-  </platform>
+<plugin
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-plugin-cpu-info"
+	version="1.0.1"
+>
+	<engines>
+        <engine name="cordova" version=">=4.0.0" />
+    </engines>
+
+	<name>CPUInfo</name>
+
+	<description>Device CPU info reading plugin for Cordova</description>
+
+	<author>Zhang Leo</author>
+
+	<keywords>cordova,system,cpu,device,hardware</keywords>
+
+	<license>MIT</license>
+
+	<js-module name="CPUInfo" src="www/CPUInfoPlugin.js">
+		<clobbers target="cordova.plugins.CPUInfo"/>
+	</js-module>
+
+	<platform name="android">
+		<source-file src="src/android/CPUInfo.java" target-dir="src/com/akodych/cpuinfo"/>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="CPUInfo">
+				<param name="android-package" value="com.akodych.cpuinfo.CPUInfo"/>
+			</feature>
+		</config-file>
+	</platform>
+	
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="CPUInfo">
+				<param name="ios-package" value="CPUInfo"/>
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/CPUInfo.h"/>
+		<source-file src="src/ios/CPUInfo.m"/>
+	</platform>
 </plugin>

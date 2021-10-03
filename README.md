@@ -1,31 +1,32 @@
-# Cordova cpu info plugin
+# Cordova CPU info plugin
 
-Reads the cpu info of your mobile.
+Reads the CPU and some other hardware parameters of Android/iOS device
 
-### Manually in iOS
+## Original author
 
-TODO: Write these instructions
+Functionality of this plugin was created by Zhang Leo. This is NPM implementation of his [GitHub project](https://github.com/442623641/cordova-plugin-cpu-info) with few additions
 
-### Manually in Android
+## Install
 
-TODO: Write these instructions
+	cordova plugin add cordova-clipboard
 
-## Use from Javascript
+## Usage
 
-If you are using jQuery, AngularJS, WinJS or any Promise/A library (Bluebird), promise style is supported. Use something like:
+Plugin creates `cordova.plugins.CPUInfo` object in global space. You can get the target info by call its methods
 
-    cordova.CPUInfo.getMacAddress().then(function (address) {
-        $('.address').text(address);
-    });
+By Promise:
 
-If not, pass a callback function:
+	cordova.plugins.CPUInfo.getMacAddress().then(function (address) {
+		$('.address').text(address);
+	});
 
-    cordova.CPUInfo.getMacAddress(function (address) {
-        alert(address);
-    });
+Or with callback function:
 
-In addition to the mac address  you can also retrieve other details about your application:
+	cordova.plugins.CPUInfo.getMacAddress(function (address) {
+		alert(address);
+	});
 
+List of CPUInfo's methods:
 
 ### getMacAddress
 
@@ -78,7 +79,3 @@ Returns available size of rom
 ### getTimes
 
 Returns the start time of the mobile
-
-
-
-

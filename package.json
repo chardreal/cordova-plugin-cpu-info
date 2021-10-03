@@ -1,0 +1,33 @@
+{
+	"name": "cordova-plugin-cpu-info",
+	"version": "1.0.1",
+	"description": "Reads the CPU and other hardware parameters of Android/iOS device",
+	"cordova": {
+		"id": "cordova-plugin-cpu-info",
+		"platforms": [
+			"android",
+			"ios"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Akodar/cordova-plugin-cpu-info.git"
+	},
+	"keywords": [
+		"cordova",
+		"system",
+		"cpu",
+		"device",
+		"hardware",
+		"info",
+		"ecosystem:cordova",
+		"cordova-android",
+		"cordova-ios"
+	],
+	"author": "Zhang Leo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Akodar/cordova-plugin-cpu-info/issues"
+	},
+	"homepage": "https://github.com/Akodar/cordova-plugin-cpu-info#readme"
+}
