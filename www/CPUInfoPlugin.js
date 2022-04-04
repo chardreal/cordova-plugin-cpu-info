@@ -1,4 +1,3 @@
-// var exec = require('cordova/exec');
 /*jslint indent: 2 */
 /*global window, jQuery, angular, cordova */
 "use strict";
