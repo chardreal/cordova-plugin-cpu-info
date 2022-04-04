@@ -1,4 +1,4 @@
-var exec = require('cordova/exec');
+// var exec = require('cordova/exec');
 /*jslint indent: 2 */
 /*global window, jQuery, angular, cordova */
 "use strict";
@@ -39,7 +39,7 @@ var getPromisedCordovaExec = function (command, success, fail) {
     }
   }
   // 5th param is NOT optional. must be at least empty array
-  exec(success, fail, "CPUInfo", command, []);
+  cordova.exec(success, fail, "CPUInfo", command, []);
   return toReturn;
 };
 
