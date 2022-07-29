@@ -7,6 +7,7 @@ import org.json.JSONException;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Environment;
